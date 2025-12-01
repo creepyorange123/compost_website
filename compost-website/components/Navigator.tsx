@@ -1,15 +1,16 @@
 
 import styles from '../styles/Header.module.css';
+import Link from 'next/link';
 
 export default function Navigator() {
     return (
         <div className={styles.navContainer}>
-            <button className={styles.navButton}>
+            <Link href="/" className={styles.navButton}>
                 Why Compost
-            </button>
-            <button className={styles.navButton}>
+            </Link>
+            <Link href="/for-home" className={styles.navButton}>
                 For Home
-            </button>
+            </Link>
             <button className={styles.navButton}>
                 For Community
             </button>

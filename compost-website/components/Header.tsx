@@ -6,11 +6,11 @@ import styles from '../styles/Header.module.css';
 import { useImageExists } from '../hooks/useImageExists';
 
 interface HeaderProps {
-    title: string;
-    imageSrc: string;
+    title?: string;
+    imageSrc?: string;
 }
 
-export default function Header({ title, imageSrc }: HeaderProps) {
+export default function Header({ title = "No Title", imageSrc = '' }: HeaderProps) {
     const imageErrorMessage: string | null = useImageExists(imageSrc);
     
     return (

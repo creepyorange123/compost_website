@@ -1,0 +1,22 @@
+
+import Title from './Title';
+import Body from './Body';
+import styles from '../styles/Text.module.css';
+
+interface TextContainerProps {
+    title: string | null;
+    content: string;
+}
+
+export default function TextContainer({ title, content }: TextContainerProps) {
+    const paragraphs: string[] = content.split('\n');
+
+    return (
+        <div className={styles.textContainer}>
+            {title !== null ? <Title title={title} /> : null}
+            {paragraphs.map((paragraph: string, index: number) => (
+                <Body key={index} content={paragraph} />
+            ))}
+        </div>
+    );
+}
