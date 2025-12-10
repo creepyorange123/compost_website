@@ -2,9 +2,8 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import useImageChecker from '../hooks/useImageChecker';
 import styles from '../styles/Header.module.css';
-import ImageChecker from './ImageChecker';
 
 interface HeaderProps {
     title?: string;
@@ -13,13 +12,7 @@ interface HeaderProps {
 
 export default function Header({ title = "No Title", imageSrc = '' }: HeaderProps) {
     
-    const [ message , setMessage ] = useState<string | null>(null)
-
-    useEffect(() => {
-        ImageChecker({ src: imageSrc, setter: setMessage });
-        console.log("Checking image load for ", imageSrc);
-        console.log("Message: ", message);
-    }, []);
+    const message : string | null = useImageChecker({ src: imageSrc });
 
     return (
         <div className={styles.headerContainer}>
