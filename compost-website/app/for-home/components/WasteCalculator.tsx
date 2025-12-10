@@ -1,31 +1,35 @@
-import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
-import { useState } from "react";
-import { useImageExists } from "../../../hooks/useImageExists";
+import { ReactCompareSlider } from "react-compare-slider";
+import { useEffect, useState } from "react";
 import styles from '../../../styles/Text.module.css';
 import Calculator from "./Calculator";
+import ImageChecker from "../../../components/ImageChecker";
 
 export function WasteCalculator() {
 
     const [position, setPosition] = useState(50);
-    const errormsg1 : string | null = useImageExists('/full-trash.png');
-    const errormsg2 : string | null = useImageExists('/compost.png');
+    const [errorMsg1, setErrorMsg1] = useState<string | null>(null);
+    const [errorMsg2, setErrorMsg2] = useState<string | null>(null);
 
-    console.log("Error 1:", errormsg1);
-    console.log("Error 2:", errormsg2);
+    useEffect(() => {
+        ImageChecker({ src: '/full-trash.png', setter: setErrorMsg1 });
+        ImageChecker({ src: '/full-trash.png', setter: setErrorMsg2 });
+    }, []);
 
     return (
         <div className = {styles.bodyContainer}>
-            {errormsg1 || errormsg2 ?
+            {errorMsg1 || errorMsg2 ?
+                <p>Error loading comparison slider.</p>
+                :
                 <ReactCompareSlider
                     itemOne={<img
                         src='/full-trash.png'
-                        alt={errormsg1? errormsg1 : "full trash"} />}
+                        alt={"full trash"} />}
                     itemTwo={<img
-                        src='/compost.png'
-                        alt={errormsg2? errormsg2 : "compost"} />}
+                        src='/full-trash.png'
+                        alt={"compost"} />}
                     position={position}
                     onPositionChange={setPosition}
-                /> : <h2> Sorry, some images died </h2>
+                />
             }
             <Calculator position={position} />
         </div>

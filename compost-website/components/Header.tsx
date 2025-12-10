@@ -2,8 +2,9 @@
 
 "use client";
 
+import { useState, useEffect } from 'react';
 import styles from '../styles/Header.module.css';
-import { useImageExists } from '../hooks/useImageExists';
+import ImageChecker from './ImageChecker';
 
 interface HeaderProps {
     title?: string;
@@ -11,13 +12,20 @@ interface HeaderProps {
 }
 
 export default function Header({ title = "No Title", imageSrc = '' }: HeaderProps) {
-    const imageErrorMessage: string | null = useImageExists(imageSrc);
     
+    const [ message , setMessage ] = useState<string | null>(null)
+
+    useEffect(() => {
+        ImageChecker({ src: imageSrc, setter: setMessage });
+        console.log("Checking image load for ", imageSrc);
+        console.log("Message: ", message);
+    }, []);
+
     return (
         <div className={styles.headerContainer}>
             <img
                 src={imageSrc}
-                alt={ imageErrorMessage ? imageErrorMessage : "Header Image" }
+                alt={ message? message : "Header Image" }
                 className={styles.headerImage}
             />
             <h1 className={styles.headerTitle}>{title}</h1>
