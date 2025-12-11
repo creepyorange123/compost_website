@@ -12,7 +12,7 @@ export default function TextContainer({ title, content }: TextContainerProps) {
     const paragraphs: string[] = content.split('\n');
 
     return (
-        <div className={styles.textContainer}>
+        <div className={styles.bodyContainer}>
             {title !== null ? <Title title={title} /> : null}
             {paragraphs.map((paragraph: string, index: number) => (
                 <Body key={index} content={paragraph} />

@@ -2,8 +2,8 @@
 
 "use client";
 
+import useImageChecker from '../hooks/useImageChecker';
 import styles from '../styles/Header.module.css';
-import { useImageExists } from '../hooks/useImageExists';
 
 interface HeaderProps {
     title?: string;
@@ -11,13 +11,14 @@ interface HeaderProps {
 }
 
 export default function Header({ title = "No Title", imageSrc = '' }: HeaderProps) {
-    const imageErrorMessage: string | null = useImageExists(imageSrc);
     
+    const message : string | null = useImageChecker({ src: imageSrc });
+
     return (
         <div className={styles.headerContainer}>
             <img
                 src={imageSrc}
-                alt={ imageErrorMessage ? imageErrorMessage : "Header Image" }
+                alt={ message? message : "Header Image" }
                 className={styles.headerImage}
             />
             <h1 className={styles.headerTitle}>{title}</h1>
