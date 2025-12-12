@@ -21,11 +21,10 @@
 }
 
 .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    color: rgb(50, 177, 69);
+    margin-top: 1rem;
+    color: rgb(44, 115, 52);
 }
 
 .link {

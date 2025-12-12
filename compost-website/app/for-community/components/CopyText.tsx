@@ -3,20 +3,19 @@ import styles from '../styles/Community.module.css';
 
 export default function CopyText ({ text } : { text: string }){
     return (
-        <div className = {styles.textContainer}>
-
+        <div className = {styles.letterContainer}>
             <div className="flex justify-between align-center gap-1">
-                <div className={styles.text}>Sample Letter:</div>
+                <div className={styles.letterHeader}>Sample Letter:</div>
                 <CopyButton text={text} />
             </div>
 
-            <div className = {styles.textBox}>
+            <div className = {styles.text}>
                 {text.split('\n').map((line, index) => (
                 <span key={index}>
                     {line}
                     <br />
                 </span>
-                ))}
+            ))}
             </div>
         </div>
     );

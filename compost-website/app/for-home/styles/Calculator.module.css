@@ -4,3 +4,12 @@
     margin: 2rem auto;
     border-radius: 100px;
 }
+
+.text {
+    font-size: 1.7rem;
+    font-family: 'Source Sans 3', sans-serif;
+    text-align: center;
+    color: #333333;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

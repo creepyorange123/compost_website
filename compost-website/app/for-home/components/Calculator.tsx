@@ -7,18 +7,25 @@ interface CalculatorProps {
 
 export default function Calculator( {position}: CalculatorProps ) {
 
-    const estimateLbs: number = Math.round(position * 0.02 * 100) ; // assuming 2,000 lbs of waste per year
-    const estimateGHG: number = Math.round(position * 0.0012 * 100) / 100; // assuming 1.2 metric tons CO2e reduced per 1,000 lbs of composted waste
-    const estimateEnergy: number = Math.round(estimateGHG * 870); // assuming 870 kWh per metric ton CO2e reduced
+    const estimateLbs: number = Math.round(position * 3)/100 ;
+    const estimateLbsYear: number = Math.round(estimateLbs * 48)
+    const estimateMethane: number = Math.round(estimateLbs * 0.45392 * 0.037*1000)/1000;
+    const estimateMethaneYear: number = Math.round(estimateMethane * 48);
+    const estimateMiles: number = Math.round(estimateMethane * 86 / 0.4);
+    const estimateMilesYear: number = Math.round(estimateMiles * 48);
 
     return (
-        <div className = {styles.body}>
-            You are saving {estimateLbs}lbs of compost waste!
-            If, instead of going to landfill, this amount of food waste were composed,
-            it would reduce greenhouse gas emissions by approximately {estimateGHG} 
-            metric tons of CO2 equivalent per year. <br />
-            The amount of energy regenerated can power a house for about {Math.round(estimateEnergy / 5)} days,
-            or power Boston for about {Math.round(estimateEnergy / 10)} hours!
+        <div className = {styles.text}>
+            You are saving {estimateLbs}lbs of compost waste per week, which is about {estimateLbsYear}lbs per year!
+            <br /><br />
+            According to an EPA report on estimated methane emissions from food waste, 34 metric tons of methane is released
+            from 907 metric tons of food waste, meaning for every kg of food waste, there is 0.037kg of methane released in landfills. 
+            <br /><br />
+            You are reducing {estimateMethane}kg of methane emission per week, and about {estimateMethaneYear}kg per year
+            <br /><br />
+            Methane is 86 times more potent than CO2, and a gasoline car produces 400g of CO2 per mile.
+            <br /><br />
+            <b>This is equivalent to driving {estimateMiles} less miles per week, or about {estimateMilesYear} less miles per year.</b>
         </div>
     );
 };
