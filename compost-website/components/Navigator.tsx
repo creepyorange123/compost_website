@@ -11,9 +11,9 @@ export default function Navigator() {
             <Link href="/for-home" className={styles.navButton}>
                 For Home
             </Link>
-            <button className={styles.navButton}>
+            <Link href="/for-community" className={styles.navButton}>
                 For Community
-            </button>
+            </Link>
             <button className={styles.navButton}>
                 References
             </button>

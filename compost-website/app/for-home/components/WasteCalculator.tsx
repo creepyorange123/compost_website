@@ -1,4 +1,4 @@
-import { ReactCompareSlider, ReactCompareSliderHandle } from "react-compare-slider";
+import { ReactCompareSlider } from "react-compare-slider";
 import { useState } from "react";
 import image_styles from '../styles/Calculator.module.css';
 import text_styles from '../../../styles/Text.module.css';
@@ -33,6 +33,7 @@ export function WasteCalculator() {
                     />
                 </div>
             }   
+            
             <div className = {text_styles.body}>
                 Toggle the slider above to decide how much of the waste above will be composed!<br />
                 Currently: {Math.round(position)}%

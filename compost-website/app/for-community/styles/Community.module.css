@@ -1,0 +1,39 @@
+.bodyContainer {
+    position: relative;
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 100px;
+}
+
+.textContainer {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1rem;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 30px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.text {
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    color: #333333;
+    white-space: pre-wrap;
+}
+
+.copyButton {
+    position: relative;
+    border-radius: 10px;
+    padding: 0.4rem 0.8rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(58, 154, 69);
+    cursor: pointer;
+    color: white;
+}
+
+.copyButton:hover {
+    background-color: #35a9ba;
+}
