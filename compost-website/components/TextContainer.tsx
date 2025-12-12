@@ -1,6 +1,6 @@
 
 import Title from './Title';
-import Body from './Body';
+import Text from './Text';
 import styles from '../styles/Text.module.css';
 
 interface TextContainerProps {
@@ -15,7 +15,7 @@ export default function TextContainer({ title, content }: TextContainerProps) {
         <div className={styles.bodyContainer}>
             {title !== null ? <Title title={title} /> : null}
             {paragraphs.map((paragraph: string, index: number) => (
-                <Body key={index} content={paragraph} />
+                <Text key={index} content={paragraph} />
             ))}
         </div>
     );
