@@ -1,5 +1,9 @@
 
-export const homepageP1: string = '';
+export const enum homeText {
+    whyCompost1 = 'According to the US Environmental Protection Agency, food waste is the number one most common category of waste, making up 24% of content in landfills; over a third of food produced in the U.S. is thrown out, and this creates a huge problem—not only the waste of resources, but the release of a significant amount of greenhouse gases such as methane. ',
+    whyCompost2 = 'Methane is the second-largest contributor to global warming after carbon dioxide (CO2). It can stay in the atmosphere for 12 years and is 86 times as potent in trapping heat as CO2, according to the Climate and Clean Air Coalition. 20% of methane production came from food waste. To reach the Paris Climate Agreement of maintaining 1.5 degrees above pre-industrial level temperature, the world needs to reduce methane production by 35-40% in the next five years.',
+    whyCompost3 = 'This is where composting comes in. Instead of sending food waste and other organic waste to the landfill, composting at home or sending them to composting services is a more environmentally friendly alternative. Landfills make trash decompose anaerobically, which is, without oxygen. Waste is typically packed into plastic bags, buried, and compressed until air is removed from the compact material. Methane, hydrogen sulfide, and CO2 are created in this process from microbes functioning in anaerobic environments. In contrast, methane-producing microbes can not survive in aerobic environments, significantly limiting the amount of methane that can be produced through composting.'
+}
 
 export const letter: string = (
     'Subject: Request to Implement a School Composting Program\n\n' + 

@@ -7,7 +7,7 @@
 
 .text {
     font-size: 1.2rem;
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     color: #333333;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -16,6 +16,24 @@
 .title {
     font-size: 2rem;
     font-weight: bold;
-    align-content: flex-start;
     color: rgb(58, 154, 69);
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: rgb(50, 177, 69);
+}
+
+.link {
+    color: rgb(27, 69, 168);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: rgb(44, 189, 211);
 }
