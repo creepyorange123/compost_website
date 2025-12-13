@@ -26,7 +26,9 @@ export default function Home() {
           <br />
           See <Link className={styles.link} href="/for-community">For Community</Link> to learn about composting in your community.
           <br />
-          Check out <Link className={styles.link} href="/references">References</Link> for articles referenced and more information on composting.
+          Check out <Link className={styles.link} 
+            href="https://docs.google.com/document/d/1sYzr_y693KtB3x_L6z-MQz6DHkzvnxrko_V6c2z7s-8/edit?usp=sharing"
+            target="_blank" rel="noopener noreferrer">References</Link> for citations, project thesis, and artist's statement.
         </div>
         
 

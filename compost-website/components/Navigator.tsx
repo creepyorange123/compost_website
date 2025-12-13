@@ -14,7 +14,7 @@ export default function Navigator() {
             <Link href="/for-community" className={styles.navButton}>
                 For Community
             </Link>
-            <Link href="https://docs.google.com/document/d/1sYzr_y693KtB3x_L6z-MQz6DHkzvnxrko_V6c2z7s-8/edit?usp=sharing" className={styles.navButton}>
+            <Link href="https://docs.google.com/document/d/1sYzr_y693KtB3x_L6z-MQz6DHkzvnxrko_V6c2z7s-8/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className={styles.navButton}>
                 References
             </Link>
         </div>
