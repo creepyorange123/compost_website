@@ -1,6 +1,7 @@
 
 import Header from '@/components/Header';
 import Navigator from '@/components/Navigator';
+import CompostTable from '@/components/CompostTable';
 import Image from '@/components/Image';
 import styles from '../styles/Text.module.css';
 import Link from 'next/dist/client/link';
@@ -35,7 +36,9 @@ export default function Home() {
         <div className={styles.text}>{homeText.whyCompost2}</div>
         <div className={styles.text}>{homeText.whyCompost3}</div>
         <Image src={'/decomposition.png'} description={'image from compostcrew.com'}/>
-      
+
+        <div className={styles.title}>What Can Be Composted?</div>
+        <CompostTable />
       </div>
 
     </div>

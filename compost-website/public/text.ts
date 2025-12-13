@@ -13,6 +13,11 @@ export const enum forhomeText {
     openAir2 = 'Break your materials into smaller pieces for better decomposition and lay a 4-6 inch layer of thick “browns” as a foundation. Then, layer “greens” and “browns” on top of each other, finishing with an outer layer of “browns”. The content of “browns” needs to be 2-3 times the amount of “greens” for the nutrients to balance out for the microbes. For better decomposition, rake and turn the compost pile every few days and add fresh “browns” to ensure there is always access to air and water in the pile. The compost should heat up toward the center while decomposing; the compost is fully completed when no visible food scraps exist and when the pile stops heating. See more details of the process '
 }
 
+export const enum forcommunityText {
+    intro1 = "Composting as a group amplifies the impact of individual efforts and makes sustainability more accessible for everyone. When schools, neighborhoods, or organizations compost together, they can significantly reduce the amount of waste sent to landfills, which helps lower overall waste disposal and hauling costs. Over time, these savings can be redirected toward other community needs.",
+    intro2 = "Group composting also creates valuable opportunities for hands-on sustainability education. Students and community members can see firsthand how food waste turns into usable compost, helping them better understand environmental systems and the importance of reducing waste.",
+    school = ''
+}
 
 export const letter: string = (
     'Subject: Request to Implement a School Composting Program\n\n' + 
@@ -20,6 +25,7 @@ export const letter: string = (
     "I hope this message finds you well. I’m writing to propose the " + 
     'introduction of a composting program within our school. The initiative would be a key step' +
     ' in saving costs, waste reduction, and environmental education\n\n' + 
+    'Some possible initiatives could include [insert example(s) from above].\n\n' + 
     'An average student produces up to 142 pounds of food waste per year, making food waste a significant issue ' +
     'and composting imperative. ' +  
     'Composting can reduce the cost of waste management. The Food Service Director News reports ' + 

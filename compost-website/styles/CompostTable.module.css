@@ -1,0 +1,41 @@
+.tableContainer {
+  width: 80%;
+  margin: 2rem auto;
+  overflow-x: auto;
+}
+
+.compostTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.header {
+  border: 1px solid #000000;
+  padding: 1rem;
+  background-color: rgb(58, 154, 69);
+  font-size: 1.1rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.cell {
+  border: 1px solid #000000;
+  padding: 1rem;
+  vertical-align: top;
+  line-height: 2;
+  color: #000000;
+}
+
+.compostTableImage {
+    max-width: 20px;
+    height: auto;
+    display: block;
+    margin: 1rem 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

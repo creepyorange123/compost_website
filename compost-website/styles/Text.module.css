@@ -9,7 +9,7 @@
     font-size: 1.2rem;
     font-family: 'Source Sans 3', sans-serif;
     color: #333333;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -23,7 +23,8 @@
 .subtitle {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     color: rgb(44, 115, 52);
 }
 
